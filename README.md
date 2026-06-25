@@ -2,7 +2,7 @@
 
 Bidet AI Voice is the native Android lane for Bidet AI: fast floating-mic dictation plus long-form Walk-and-Talk recording that can keep capturing with the screen off.
 
-This repository is a public release-asset lane for trusted testers and builder-preview downloads. The full Android source lane is still being scrubbed and prepared separately.
+This repository is a release-asset lane for trusted testers and builder-preview downloads. The full Android source lane is still being scrubbed and prepared separately.
 
 ## Current Release
 
@@ -24,14 +24,25 @@ This repository is a public release-asset lane for trusted testers and builder-p
 
 ## Install Shape
 
-1. Download the APK from the latest release.
-2. Allow install from this source on Android.
-3. Grant microphone and notification permissions.
-4. Enable the Bidet AI Voice Accessibility service.
-5. Add your own API keys for cloud dictation and cleanup.
+1. Request tester access before downloading the APK.
+2. Confirm the APK SHA-256 before installing.
+3. Allow install from this source on Android.
+4. Grant microphone and notification permissions.
+5. Enable the Bidet AI Voice Accessibility service only if you understand the insertion workflow.
+6. Add your own API keys for cloud dictation and cleanup.
+
+## Tester Disclosure
+
+- This is not a Play Store build.
+- Android may show an unknown-source install warning.
+- The Accessibility service is used for supported text insertion workflows. Accessibility services can observe active app/window context while enabled.
+- Microphone audio and transcript/cleanup text may be sent to the providers you configure, such as Groq, Gemini, or OpenAI.
+- API keys are tester-provided.
+- To stop testing, uninstall the app and remove its saved app data.
+- The release APK is signed, but the source snapshot for this exact APK is not yet published in this release lane.
 
 ## Honest Boundary
 
-This is not the Play Store build yet. It is a signed sideload preview for people comfortable with Android permissions, Accessibility services, and builder-preview software.
+This is a signed sideload preview for people comfortable with Android permissions, Accessibility services, and builder-preview software.
 
 Play Store packaging, public support docs, source publication, and a smoother model-install path are roadmap items.
